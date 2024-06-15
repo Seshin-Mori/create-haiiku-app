@@ -43,17 +43,17 @@ const Navbar = () => {
               </button>
             </Link>
             <Link to='/create'>
-              <button className='bg-blue-500 px-3 py-2 rounded'>
+              <button className='bg-green-500 px-3 py-2 rounded'>
                 新規俳句作成
               </button>
             </Link>
             <Link to='/completed'>
-              <button className='bg-blue-500 px-3 py-2 rounded'>
+              <button className='bg-pink-900 px-3 py-2 rounded'>
                 完成した俳句一覧
               </button>
             </Link>
             <Link to='/masterpieces'>
-              <button className='bg-blue-500 px-3 py-2 rounded'>
+              <button className='bg-lime-900 px-3 py-2 rounded'>
                 名作俳句
               </button>
             </Link>
@@ -84,12 +84,12 @@ const Navbar = () => {
             </button>
           </Link>
           <Link to='/completed'>
-            <button className='block w-full text-left bg-blue-500 px-3 py-2 rounded mt-2'>
+            <button className='block w-full text-left bg-pink-900 px-3 py-2 rounded mt-2'>
               完成した俳句一覧
             </button>
           </Link>
           <Link to='/masterpieces'>
-            <button className='block w-full text-left bg-blue-500 px-3 py-2 rounded mt-2'>
+            <button className='block w-full text-left bg-lime-900 px-3 py-2 rounded mt-2'>
               名作俳句
             </button>
           </Link>
