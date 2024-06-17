@@ -18,6 +18,7 @@ const MasterpieceHaikuPage = () => {
   const [lastDoc, setLastDoc] = useState(null);
   const [firstDoc, setFirstDoc] = useState(null);
   const [isNextPageAvailable, setIsNextPageAvailable] = useState(false);
+  const [isPreviousPageAvailable, setIsPreviousPageAvailable] = useState(false);
   const pageSize = 10;
 
   const fetchHaikus = async (lastDoc = null, firstDoc = null) => {
@@ -45,6 +46,7 @@ const MasterpieceHaikuPage = () => {
     setFirstDoc(haikusSnapshot.docs[0]);
     setLastDoc(haikusSnapshot.docs[haikusSnapshot.docs.length - 1]);
     setIsNextPageAvailable(haikusSnapshot.docs.length === pageSize);
+    setIsPreviousPageAvailable(firstDoc !== null);
     setHaikus(haikusData);
   };
 
@@ -72,9 +74,9 @@ const MasterpieceHaikuPage = () => {
         <button
           onClick={handlePreviousPage}
           className={`bg-blue-500 text-white px-4 py-2 rounded ${
-            !firstDoc ? "opacity-50 cursor-not-allowed" : ""
+            !isPreviousPageAvailable ? "opacity-50 cursor-not-allowed" : ""
           }`}
-          disabled={!firstDoc}
+          disabled={!isPreviousPageAvailable}
         >
           前のページ
         </button>
